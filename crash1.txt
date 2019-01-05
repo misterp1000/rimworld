@@ -1,0 +1,29 @@
+JobDriver threw exception in initAction for pawn Justin driver=JobDriver_DoBill (toilIndex=13) driver.job=(DoBill (Job_2737328) A=Thing_Android4Tier855802 B=Thing_ArchotechNanites814733 C=(146, 0, 147)) lastJobGiver=RimWorld.JobGiver_Work
+System.NullReferenceException: Object reference not set to an instance of an object
+at FacialStuff.PawnExtensions.CheckFaceForAddedParts (Verse.Hediff,FacialStuff.CompFace,Verse.BodyPartRecord,Verse.BodyPartRecord,Verse.BodyPartRecord) <0x00020>
+at FacialStuff.PawnExtensions.CheckPart (System.Collections.Generic.List`1<Verse.BodyPartRecord>,Verse.Hediff,FacialStuff.CompFace,FacialStuff.CompBodyAnimator,bool) <0x00572>
+at FacialStuff.PawnExtensions.CheckForAddedOrMissingParts (Verse.Pawn) <0x0053d>
+at FacialStuff.Harmony.HarmonyPatchesFS.ResolveAllGraphics_Postfix (Verse.PawnGraphicSet) <0x0004d>
+at (wrapper dynamic-method) Verse.PawnGraphicSet.ResolveAllGraphics_Patch2 (object) <0x006c8>
+at AlienRace.HarmonyPatches.CheckForStateChangePostfix (Verse.Pawn_HealthTracker) <0x00102>
+at (wrapper dynamic-method) Verse.Pawn_HealthTracker.CheckForStateChange_Patch1 (object,System.Nullable`1<Verse.DamageInfo>,Verse.Hediff) <0x008ab>
+at Verse.Pawn_HealthTracker.RestorePart (Verse.BodyPartRecord,Verse.Hediff,bool) <0x0014e>
+at RimWorld.MedicalRecipesUtility.RestorePartAndSpawnAllPreviousParts (Verse.Pawn,Verse.BodyPartRecord,Verse.IntVec3,Verse.Map) <0x00096>
+at MOARANDROIDS.Recipe_InstallArtificialBodyPartAndroid.ApplyOnPawn (Verse.Pawn,Verse.BodyPartRecord,Verse.Pawn,System.Collections.Generic.List`1<Verse.Thing>,RimWorld.Bill) <0x001a4>
+at RimWorld.Bill_Medical.Notify_IterationCompleted (Verse.Pawn,System.Collections.Generic.List`1<Verse.Thing>) <0x0008e>
+at Verse.AI.Toils_Recipe/<FinishRecipeAndStartStoringProduct>c__AnonStorey2.<>m__0 () <0x00363>
+at Verse.AI.JobDriver.TryActuallyStartNextToil () <0x0071f>
+
+Verse.Log:Error(String, Boolean)
+Verse.AI.JobUtility:TryStartErrorRecoverJob(Pawn, String, Exception, JobDriver)
+Verse.AI.JobDriver:TryActuallyStartNextToil()
+Verse.AI.JobDriver:ReadyForNextToil()
+Verse.AI.<DoRecipeWork>c__AnonStorey1:<>m__1()
+Verse.AI.JobDriver:DriverTick()
+Verse.AI.Pawn_JobTracker:JobTrackerTick()
+Verse.Pawn:Tick()
+Verse.TickList:Tick()
+Verse.TickManager:DoSingleTick()
+Verse.TickManager:TickManagerUpdate()
+Verse.Game:UpdatePlay()
+Verse.Root_Play:Update()
